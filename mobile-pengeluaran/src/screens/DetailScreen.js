@@ -98,7 +98,7 @@ export default function DetailScreen({ navigation, route }) {
           <MaterialIcons name="edit" size={18} color={COLORS.primaryDark} />
           <Text style={[s.btnText, { color: COLORS.primaryDark }]}>Ubah</Text>
         </Pressable>
-        <Pressable style={[s.btn, s.btnDelete]} onPress={() => setConfirm(true)}>
+           <Pressable style={[s.btn, s.btnDelete]} onPress={() => navigation.navigate('Hapus', { item })}>
           <MaterialIcons name="delete" size={18} color={COLORS.danger} />
           <Text style={[s.btnText, { color: COLORS.danger }]}>Hapus</Text>
         </Pressable>

@@ -1,6 +1,6 @@
 // GANTI dengan IPv4 laptop kamu (cek dengan `ipconfig`). Jangan pakai localhost.
 // Emulator Android: http://10.0.2.2:3000
-export const API_BASE = 'http:// 192.168.137.55:3000';
+export const API_BASE = 'http://172.27.141.134:3000';
 
 export const COLORS = {
   surface: '#F8F9FF',
