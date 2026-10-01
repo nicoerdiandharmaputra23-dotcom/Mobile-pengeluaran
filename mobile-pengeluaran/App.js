@@ -9,6 +9,7 @@ import TambahScreen from './src/screens/TambahScreen';
 import DetailScreen from './src/screens/DetailScreen';
 import UbahScreen   from './src/screens/UbahScreen';
 import HapusScreen  from './src/screens/HapusScreen';
+import PilihKategoriScreen from './src/screens/PilihKategoriScreen';
 import { COLORS } from './src/utils/constants';
 
 const Stack = createNativeStackNavigator();
@@ -55,6 +56,11 @@ export default function App() {
             name="Hapus"
             component={HapusScreen}
             options={({ navigation }) => ({ title: 'Detail Pengeluaran', headerLeft: backButton(navigation) })}
+          />
+          <Stack.Screen
+            name="PilihKategori"
+            component={PilihKategoriScreen}
+            options={({ navigation }) => ({ title: 'Pilih Kategori', headerLeft: backButton(navigation) })}
           />
         </Stack.Navigator>
       </NavigationContainer>

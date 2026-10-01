@@ -19,6 +19,21 @@ export const formatInputRupiah = (text) => {
   return n ? titik(n) : '';
 };
 
+// Seperti formatInputRupiah, tapi tanda minus di depan tetap dipertahankan.
+export const formatInputNominal = (text) => {
+  const negatif = String(text).trim().startsWith('-');
+  const n = parseRupiah(text);
+  if (!n) return negatif ? '-' : '';
+  return (negatif ? '-' : '') + titik(n);
+};
+
+// Mengubah teks input jadi angka, termasuk nilai negatif.
+export const parseNominal = (str) => {
+  const negatif = String(str).trim().startsWith('-');
+  const n = parseRupiah(str);
+  return negatif ? -n : n;
+};
+
 const BULAN = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
 export function formatTanggal(dateStr) {
   if (!dateStr) return '—';
